@@ -10,5 +10,5 @@ module.exports = (app) => {
     router.delete('/:id', quote.delete);
     router.delete('/', quote.deleteAll);
 
-    app.use('/api', router);
+    app.use('/api/quote', router);
 };
