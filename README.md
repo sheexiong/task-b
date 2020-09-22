@@ -5,7 +5,7 @@ Implement a simple Javascript backend and REST API to GET, POST, PUT and DELETE.
 
 This repository contains a API that allows for create, retrive, update and delete of quotes.
 
-The application uses Node.js and PostgresSQL. It will be testing through Postman.
+The application uses [Node.js](https://nodejs.org/en/) and [PostgreSQL](https://www.postgresql.org/)(with pgAdmin). It will be testing through [Postman](https://www.postman.com/).
 
 ### Setup and Run Task B1
 1. You are required to download and install [Node.js](https://nodejs.org/en/), [PostgreSQL](https://www.postgresql.org/)(with pgAdmin) and [Postman](https://www.postman.com/).
