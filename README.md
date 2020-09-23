@@ -64,5 +64,19 @@ This section will show how to use [Postman](https://www.postman.com/) to test th
     * You should get the message of total number of quotes was deleted successfully.
 
 ## Task B2
-Write simple test cases for API and use a CI tool(Travis) to automate testing.
+Write simple test cases for API and use a CI tool([Travis CI](https://travis-ci.com/)) to automate testing.
 
+The test cases are created by [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/).
+
+### Run test locally
+1. Ensure already complete task 1-5 for Setup and Run Task B1.
+2. Run `npm test` to run the test case through Mocha.
+
+### Run test through Travis CI
+1. Ensure you have push this repository to your Github.
+2. Go to [Travis CI](https://travis-ci.com/).
+3. Login through the Github account.
+4. Go to [Travis CI Setting page](https://travis-ci.com/account/repositories), under **Repositories** tab, click **Manage repositories on Github**.
+5. Under **Repository access**, either select All repositories or only select this repository on you Github.
+6. Now, you can edit README.md and pust it to your repository.
+7. You should check the [Travis CI](https://travis-ci.com/) to check the status of test on travis.
