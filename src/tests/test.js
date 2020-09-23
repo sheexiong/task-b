@@ -1,6 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../index');
+const { sequelize } = require('../models');
 
 // Configure chai
 chai.use(chaiHttp);
@@ -8,7 +9,12 @@ chai.should();
 
 describe('Testing quote API', () => {
     var quotes = [];
-    
+
+    before((done) => {
+        sequelize.sync();
+        done();
+    });
+
     describe('TESTING POST and DELETE API', () => {
         var delId;
         // Delete to reset the database
