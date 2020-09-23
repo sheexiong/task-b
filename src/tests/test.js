@@ -1,7 +1,6 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../index');
-const { sequelize } = require('../models');
 
 // Configure chai
 chai.use(chaiHttp);
@@ -11,8 +10,9 @@ describe('Testing quote API', () => {
     var quotes = [];
 
     before((done) => {
-        sequelize.sync();
-        done();
+        app.on('serverStarted', () => {
+            done();
+        });
     });
 
     describe('TESTING POST and DELETE API', () => {
