@@ -1,5 +1,7 @@
 # CS3219 Task B
 
+[![Build Status](https://travis-ci.com/sheexiong/task-b.svg?branch=master)](https://travis-ci.com/sheexiong/task-b)
+
 ## Task B1
 Implement a simple Javascript backend and REST API to GET, POST, PUT and DELETE.
 
