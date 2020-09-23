@@ -113,6 +113,7 @@ exports.deleteAll = (req, res) => {
         })
         .catch((err) => {
             res.status(500).send({
+                error: err,
                 message: 'Error occured while removing all quotes',
             });
         });
