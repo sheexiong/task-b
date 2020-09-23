@@ -14,11 +14,12 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-require('./routes/quote.routes')(app);
-
 sequelize.sync().then(() => {
     app.listen(PORT, () => {
+        require('./routes/quote.routes')(app);
         console.log(`App listening on port ${PORT}`);
+
+        app.emit('serverStarted');
     });
 });
 
