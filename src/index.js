@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const { sequelize } = require('./models');
+const { sequelize, Quote } = require('./models');
 
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 require('./routes/quote.routes')(app);
 
 sequelize.sync().then(() => {
+    console.log(Quote);
     app.listen(PORT, () => {
         console.log(`App listening on port ${PORT}`);
     });

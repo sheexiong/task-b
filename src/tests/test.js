@@ -11,27 +11,6 @@ describe('Testing quote API', () => {
     
     describe('TESTING POST and DELETE API', () => {
         var delId;
-
-        // Test to add firt new quote
-        it('Should create first new quote', (done) => {
-            chai.request(app)
-                .post('/api/quote')
-                .send({
-                    content: 'The purpose of our lives is to be happy',
-                    author: 'Dalai Lama',
-                })
-                .end((err, res) => {
-                    if (err) {
-                        throw err;
-                    }
-                    res.should.have.status(200);
-                    res.body.should.be.a('object');
-                    res.body.content.should.be.string('The purpose of our lives is to be happy');
-                    res.body.author.should.be.string('Dalai Lama');
-                    done();
-                });
-        });
-
         // Delete to reset the database
         it('Should Remove all quotes', (done) => {
             chai.request(app)
