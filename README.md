@@ -61,3 +61,8 @@ This section will show how to use [Postman](https://www.postman.com/) to test th
     * Press **Send** button.
     * You should get the message of total number of quotes was deleted successfully.
 
+
+
+## Task B2
+
+
