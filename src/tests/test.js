@@ -9,8 +9,11 @@ chai.should();
 
 describe('Testing quote API', () => {
     var quotes = [];
+    
     describe('TESTING POST and DELETE API', () => {
         var delId;
+
+        /** 
         // Delete to reset the database
         it('Should Remove all quotes', (done) => {
             chai.request(app)
@@ -24,6 +27,7 @@ describe('Testing quote API', () => {
                     done();
                 });
         });
+        */
 
         // Test to add firt new quote
         it('Should create first new quote', (done) => {
