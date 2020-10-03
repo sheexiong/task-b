@@ -14,6 +14,11 @@ provider:
       - subnet-9f7dadf9
       - subnet-9620e0de
       - subnet-7576f92c
+  environment:
+    POSTGRES_HOST: task-b-cs3219.carbc1lvkrhw.ap-southeast-1.rds.amazonaws.com
+    POSTGRES_USER: postgres
+    POSTGRES_PASS: '12345678'
+    POSTGRES_DB: taskb
 
 functions:
   app:
