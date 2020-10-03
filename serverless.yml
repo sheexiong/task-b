@@ -1,7 +1,4 @@
 service: task-b-cs3219
-custom:
-  serverless-offline:
-    noPrependStageInUrl: true
 provider:
   name: aws
   runtime: nodejs12.x

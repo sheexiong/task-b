@@ -18,7 +18,7 @@ The application uses [Node.js](https://nodejs.org/en/) and [PostgreSQL](https://
 6. Run `npm start` to start the application.
 7. Afterwards, we can start accessing the API through the [Postman](https://www.postman.com/).
 
-### Postman testing
+### Postman testing locally
 This section will show how to use [Postman](https://www.postman.com/) to test the API.
 
 1. Get all quotes
@@ -57,7 +57,7 @@ This section will show how to use [Postman](https://www.postman.com/) to test th
     * Select **DELETE** request.
     * Press **Send** button.
     * You should get the message of quote was deleted successfully.
-7. Delete all quote
+7. Delete all quotes
     * Enter http://localhost:3000/api/quote
     * Select **DELETE** request.
     * Press **Send** button.
@@ -80,3 +80,25 @@ The test cases are created by [Mocha](https://mochajs.org/) and [Chai](https://w
 5. Under **Repository access**, either select All repositories or only select this repository on you Github.
 6. Now, you can edit README.md and pust it to your repository.
 7. You should check the [Travis CI](https://travis-ci.com/) to check the status of test on travis.
+
+## Task B3
+Use CD tool for automated deployment to a serverless service.
+
+This task using [AWS Lambda](https://aws.amazon.com/lambda/) as serverless service and [Travis CI](https://travis-ci.com/) for automatic deployment.
+
+### Setup Travis with AWS Credentials for CD
+1. Ensure you have push this repository to your Github.
+2. Go to [Travis CI](https://travis-ci.com/).
+3. Under task-b tab, select `More options` and choose `Settings`.
+4. Under Environment Variable enter the below 2 entries and select All Branches(the access id and secret key will only share in the submission pdf):
+    - `AWS_ACCESS_KEY_ID` : `{access id}`
+    - `AWS_SECRET_ACCESS_KEY` : `{secret key}`
+5. Now the repository should auto deploy once got any new commit.
+
+### Postman Testing with serverless service
+This section will show how to use [Postman](https://www.postman.com/) to test the API from [AWS Lambda](https://aws.amazon.com/lambda/) serverless service.
+
+1. You will not required to start the local server in order to test the [AWS Lambda](https://aws.amazon.com/lambda/) serverless service.
+2. The steps for communicate with [AWS Lambda](https://aws.amazon.com/lambda/) is same as [Postman testing locally](#Postman-testing-locally) except the URL will be different.
+3. You are required to use https://pm8df80mo7.execute-api.ap-southeast-1.amazonaws.com/dev/api/quote instead of http://localhost:3000/api/quote when accessing `Get all quotes`, `Create a new quote` and `Delete all quotes`.
+4. You are required to use https://pm8df80mo7.execute-api.ap-southeast-1.amazonaws.com/dev/api/quote/{id} instead of http://localhost:3000/api/quote/{id} when accessing `Get a specific quote`, `Update a quote` and `Delete a quote`.
