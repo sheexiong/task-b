@@ -22,7 +22,8 @@ app.get('/index', async (req, res) => {
 require('./routes/quote.routes')(app);
 
 sequelize.sync().then(() => {
-    app.listen(PORT, () => {
+    app.listen(PORT, async () => {
+        await sequelize.authenticate();
         console.log(`App listening on port ${PORT}`);
         app.emit('serverStarted');
     });
