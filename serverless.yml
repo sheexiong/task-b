@@ -1,0 +1,26 @@
+service: task-b-cs3219
+custom:
+  serverless-offline:
+    noPrependStageInUrl: true
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-southeast-1
+  vpc:
+    securityGroupIds:
+      - sg-1fb40368
+    subnetIds:
+      - subnet-9f7dadf9
+      - subnet-9620e0de
+      - subnet-7576f92c
+
+functions:
+  app:
+    handler: ./src/index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+
+plugins:
+  - serverless-offline

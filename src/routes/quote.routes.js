@@ -2,7 +2,7 @@ module.exports = (app) => {
     const quote = require('../controllers/quote.controller');
 
     var router = require('express').Router();
-
+    
     router.get('/', quote.findAll);
     router.get('/:id', quote.findOne);
     router.post('/', quote.create);
