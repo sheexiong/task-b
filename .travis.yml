@@ -8,3 +8,4 @@ before_script:
 scripts:
     - npm run test
     - npm install -g serverless
+    - npm run deploy
