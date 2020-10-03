@@ -1,7 +1,7 @@
 const dbConfigAll = require('../config/db.config');
 const Sequelize = require('sequelize');
 
-const dbConfig = dbConfigAll.online;
+const dbConfig = dbConfigAll.local;
 
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
     host: dbConfig.HOST,
