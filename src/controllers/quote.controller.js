@@ -63,10 +63,12 @@ exports.update = (req, res) => {
             if (num == 1) {
                 res.send({
                     message: `Quote ${id} was updated successfully`,
+                    status: 'success',
                 });
             } else {
                 res.send({
                     message: `Failed to update quote ${id}.`,
+                    status: 'fail',
                 });
             }
         })
@@ -87,10 +89,12 @@ exports.delete = (req, res) => {
             if (num == 1) {
                 res.send({
                     message: `Quote ${id} was deleted successfully`,
+                    status: 'success',
                 });
             } else {
                 res.send({
                     message: `Failed to delete quote ${id}.`,
+                    status: 'fail',
                 });
             }
         })

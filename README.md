@@ -102,3 +102,23 @@ This section will show how to use [Postman](https://www.postman.com/) to test th
 2. The steps for communicate with [AWS Lambda](https://aws.amazon.com/lambda/) is same as [Postman testing locally](#Postman-testing-locally) except the URL will be different.
 3. You are required to use https://pm8df80mo7.execute-api.ap-southeast-1.amazonaws.com/dev/api/quote instead of http://localhost:3000/api/quote when accessing `Get all quotes`, `Create a new quote` and `Delete all quotes`.
 4. You are required to use https://pm8df80mo7.execute-api.ap-southeast-1.amazonaws.com/dev/api/quote/{id} instead of http://localhost:3000/api/quote/{id} when accessing `Get a specific quote`, `Update a quote` and `Delete a quote`.
+
+## Task B4
+Build a frontend SPA using Vue or any other framework.
+
+This task uses [Vue.js](https://vuejs.org/) and [BootstrapVue](https://bootstrap-vue.org/) as bootstrap framework.
+
+### Setup and Run Frontend Vue
+1. Navigate to frontend folder by `cd frontend`.
+2. Run `npm install` to install all the required dependencies to run this application.
+3. Run `npm run serve` to start the Vue website.
+
+### Interact API with the Vue website.
+The website using deployed API in AWS lambda from [Task B3](#Task-B3), so it does not required to run the backend locally.
+
+1. Get all quotes by clicking `Get All Quotes` button.
+2. Get specific quote by enter the quote's id and click `Get The Quote` button.
+3. Add a new quote by enter the quote content and author and then click `Submit` button. You can observe the added quote by using `Get All Quotes` button in step 1.
+4. Update existing quote by enter the quote's id, updated quote content and updated author, then click `Update` button.
+5. Delete specific quote by enter quote's id and click `Delete` button.
+6. Delete all quotes in backend by clicking `Delete All Quotes` button. (**Caution:** This button will delete all entries in database.)
