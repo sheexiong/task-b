@@ -24,7 +24,6 @@ require('./routes/quote.routes')(app);
 sequelize.sync().then(() => {
     app.listen(PORT, () => {
         console.log(`App listening on port ${PORT}`);
-
         app.emit('serverStarted');
     });
 });
