@@ -112,6 +112,7 @@ This task uses [Vue.js](https://vuejs.org/) and [BootstrapVue](https://bootstrap
 1. Navigate to frontend folder by `cd frontend`.
 2. Run `npm install` to install all the required dependencies to run this application.
 3. Run `npm run serve` to start the Vue website.
+4. Now you should be able to access the Vue website by http://localhost:8080/.
 
 ### Interact API with the Vue website.
 The website using deployed API in AWS lambda from [Task B3](#Task-B3), so it does not required to run the backend locally.
